@@ -9,6 +9,8 @@ https://github.com/gaganichake/limit-service
 
 https://github.com/gaganichake/naming-server
 
+https://github.com/gaganichake/spring-cloud-config-server
+
 https://github.com/gaganichake/api-gateway
 
 https://github.com/gaganichake/git-localconfig-repo
