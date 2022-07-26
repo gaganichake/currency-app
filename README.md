@@ -1,4 +1,17 @@
-# currency-app
+# Currency-app
+
+## Required projects
+https://github.com/gaganichake/currency-conversion-service
+
+https://github.com/gaganichake/currency-exchange-service
+
+https://github.com/gaganichake/limit-service
+
+https://github.com/gaganichake/naming-server
+
+https://github.com/gaganichake/api-gateway
+
+https://github.com/gaganichake/git-localconfig-repo
 
 # Docker commands
 
