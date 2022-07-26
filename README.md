@@ -1,4 +1,17 @@
-# currency-app
+# Currency App
+
+## Required projects
+https://github.com/gaganichake/currency-conversion-service
+
+https://github.com/gaganichake/currency-exchange-service
+
+https://github.com/gaganichake/limit-service
+
+https://github.com/gaganichake/naming-server
+
+https://github.com/gaganichake/api-gateway
+
+https://github.com/gaganichake/git-localconfig-repo
 
 # Docker commands
 
@@ -168,6 +181,9 @@ kubectl get service currency-exchange -o yaml >> service.yaml
 (You may move all content of service.yaml at the end of deployment.yaml and delete service.yaml)
 (In deployment.xml update replicas: 1 to   replicas: 2)
 
+(You may move all content of service.yaml at the end of deployment.yaml and delete service.yaml)
+(In deployment.xml update replicas: 1 to   replicas: 2)
+
 kubectl diff -f deployment.yaml
 kubectl apply -f deployment.yaml
 
@@ -196,6 +212,23 @@ watch -n 0.1 curl http://34.66.241.150:8100/currency-conversion-feign/from/USD/t
 
 docker push in28min/mmv2-currency-conversion-service:0.0.12-SNAPSHOT
 docker push in28min/mmv2-currency-exchange-service:0.0.12-SNAPSHOT
+<<<<<<< HEAD
+=======
+
+kubectl rollout history deployment currency-conversion
+kubectl rollout history deployment currency-exchange
+kubectl rollout undo deployment currency-exchange --to-revision=1
+
+# Auto Scaling
+
+kubectl autoscale deployment currency-exchange --min=1 --max=3 --cpu-percent=5 
+kubectl get hpa (Horizontal Pod Autoscaler)
+kubectl top pod
+kubectl top nodes
+kubectl delete hpa currency-exchange
+kubectl diff -f deployment.yaml
+kubectl apply -f deployment.yaml
+>>>>>>> origin/master
 
 kubectl rollout history deployment currency-conversion
 kubectl rollout history deployment currency-exchange
